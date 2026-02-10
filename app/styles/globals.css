@@ -1,0 +1,241 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
+
+@theme inline {
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  --spacing-between-blocks-tiny: var(--spacing-8);
+  --spacing-between-blocks-xxsmall: var(--spacing-12);
+  --spacing-between-blocks-xsmall: var(--spacing-16);
+  --spacing-between-blocks-small: var(--spacing-20);
+
+  --spacing-between-blocks-medium: var(--spacing-24);
+  --spacing-between-blocks-large: var(--spacing-32);
+  --spacing-between-blocks-xlarge: var(--spacing-40);
+  --spacing-between-blocks-xxlarge: var(--spacing-48);
+
+  --spacing-between-blocks-huge: var(--spacing-64);
+  --spacing-between-blocks-xhuge: var(--spacing-72);
+
+  --spacing-form-fields-gap: var(--spacing-16);
+  --spacing-inner-gap: var(--spacing-8);
+  --spacing-between-buttons: var(--spacing-12);
+
+  --spacing-between-title-text: var(--spacing-20);
+
+  --spacing-section-large: var(--section-large);
+  --spacing-section-medium: var(--section-medium);
+  --spacing-section-small: var(--section-small);
+  --spacing-section-tiny: var(--section-tiny);
+
+  --container-max-3-cols: 54.5rem;
+
+  --container-grid-medium: 87.75rem;
+
+  --color-title-100: var(--title-100);
+  --color-title-200: var(--title-200);
+
+  --color-body-100: var(--body-100);
+  --color-body-200: var(--body-200);
+
+  --color-border-default: var(--border-default);
+
+  --color-main-default: var(--purple-default);
+
+  --color-bg-theme-1: rgba(4, 3, 5, 1);
+
+  --spacing-padding-global: var(--padding-global);
+
+  --radius-default: 0.25rem;
+}
+
+:root {
+  --font-heading: var(--font-geist-sans), sans-serif;
+  --font-body: var(--font-geist-sans), sans-serif;
+
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-20: 1.25rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-40: 2.5rem;
+  --spacing-48: 3rem;
+  --spacing-64: 4rem;
+  --spacing-72: 4.5rem;
+
+  --section-large: 10rem;
+  --section-medium: 7.5rem;
+  --section-small: 6rem;
+  --section-tiny: 4.5rem;
+
+  --title-100: black;
+  --title-200: black;
+
+  --body-100: black;
+  --body-200: black;
+
+  --border-default: white;
+
+  --purple-default: rgba(29, 14, 102, 1);
+
+  --white-default: #ffffff;
+
+  --padding-global: 1.5rem;
+}
+
+.dark {
+  --title-100: rgba(255, 255, 255, 0.95);
+  --title-200: rgba(255, 255, 255, 0.95);
+
+  --body-100: rgba(196, 196, 197, 1);
+  --body-200: rgba(196, 196, 197, 1);
+
+  --border-default: rgba(196, 196, 197, 0.5);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img {
+    @apply rounded-default object-cover;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  address {
+    @apply not-italic;
+  }
+
+  body {
+    font-family: var(--font-body);
+    @apply text-body-100 bg-bg-theme-1 text-sm leading-normal font-[550];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  .tag,
+  .button-text {
+    font-family: var(--font-heading);
+    @apply text-title-100 leading-[1.2] font-bold tracking-[0.08em] uppercase;
+  }
+
+  h1,
+  .h1 {
+    @apply text-[2.5rem];
+  }
+
+  h2,
+  .h2 {
+    @apply text-[2rem];
+  }
+
+  h3,
+  .h3 {
+    @apply text-[1.5rem];
+  }
+
+  h4,
+  .h4 {
+    @apply text-[1.375rem];
+  }
+
+  h5,
+  .h5 {
+    @apply text-[1.25rem];
+  }
+
+  h6,
+  .h6 {
+    @apply text-[1.125rem];
+  }
+
+  @media (max-width: 1023px) {
+    h1,
+    .h1 {
+      @apply text-[1.5625rem];
+    }
+
+    h2,
+    .h2 {
+      @apply text-[1.4375rem];
+    }
+
+    h3,
+    .h3 {
+      @apply text-[1.3125rem];
+    }
+
+    h4,
+    .h4 {
+      @apply text-[1.1875rem];
+    }
+
+    h5,
+    .h5 {
+      @apply text-[1.0625rem];
+    }
+
+    h6,
+    .h6 {
+      @apply text-[0.9375rem];
+    }
+  }
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+/* :root {
+  --font-from: 14;
+  --font-to: 14;
+  --vw-from: calc(1440 / 100);
+  --vw-to: calc(2401 / 100);
+  --coefficient: calc(
+    (var(--font-to) - var(--font-from)) / (var(--vw-to) - var(--vw-from))
+  );
+  --base: calc((var(--font-from) - var(--vw-from) * var(--coefficient)) / 16);
+}
+
+html {
+  font-size: calc(var(--base) * 1rem + var(--coefficient) * 1vw);
+}
+
+@media screen and (max-width: 1440px) {
+  :root {
+    --font-from: 10;
+    --font-to: 12;
+    --vw-from: calc(479 / 100);
+    --vw-to: calc(1440 / 100);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  :root {
+    --font-from: 11;
+    --font-to: 13;
+    --vw-from: calc(1 / 100);
+    --vw-to: calc(479 / 100);
+  }
+} */
