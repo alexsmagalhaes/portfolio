@@ -1,5 +1,7 @@
 import { Geist } from "next/font/google";
 
+import { Footer } from "./_components/footer";
+import { SmoothScroll } from "./_components/smooth-scroll";
 import "./styles/globals.css";
 import { Icons } from "./styles/material-icons/icons";
 
@@ -30,7 +32,11 @@ export default function RootLayout({
         <Icons />
       </head>
       <body className={`${geistSans.className} dark antialiased`}>
-        ssssaOlá{children}
+        <SmoothScroll>
+          <div className="h-[62.5rem]"></div>
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

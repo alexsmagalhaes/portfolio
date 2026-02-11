@@ -96,7 +96,7 @@
   --body-100: rgba(196, 196, 197, 1);
   --body-200: rgba(196, 196, 197, 1);
 
-  --border-default: rgba(196, 196, 197, 0.5);
+  --border-default: rgba(196, 196, 197, 0.15);
 }
 
 @layer base {
