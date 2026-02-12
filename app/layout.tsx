@@ -1,4 +1,4 @@
-import { Geist } from "next/font/google";
+import { Geist, JetBrains_Mono } from "next/font/google";
 
 import { Footer } from "./_components/footer";
 import { SmoothScroll } from "./_components/smooth-scroll";
@@ -10,7 +10,21 @@ const geistSans = Geist({
   subsets: ["latin"],
   display: "swap",
   fallback: [
-    "Inter",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    "system-ui",
+    "sans-serif",
+  ],
+});
+
+const jetBrains = JetBrains_Mono({
+  variable: "--font-jetbrains-nono",
+  subsets: ["latin"],
+  display: "swap",
+  fallback: [
     "Segoe UI",
     "Roboto",
     "Helvetica Neue",
@@ -31,7 +45,9 @@ export default function RootLayout({
       <head>
         <Icons />
       </head>
-      <body className={`${geistSans.className} dark antialiased`}>
+      <body
+        className={`${geistSans.className} ${jetBrains.variable} dark antialiased`}
+      >
         <SmoothScroll>
           <div className="h-[62.5rem]"></div>
           {children}

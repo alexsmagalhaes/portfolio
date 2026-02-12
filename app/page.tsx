@@ -1,3 +1,9 @@
+import { About } from "./(home)/_components/about";
+
 export default function Home() {
-  return <main></main>;
+  return (
+    <main>
+      <About />
+    </main>
+  );
 }

@@ -40,9 +40,9 @@ export function Footer() {
             href="mailto:alexmagalhaesprofissional@gmail.com"
             target="_blank"
           >
-            Email:{" "}
-            <span className="underline">
-              alexmagalhaesprofissional@gmail.com
+            Whatsapp:{" "}
+            <span className="text-[0.8125rem] underline">
+              (88) 9 9332 - 6040
             </span>
           </Link>
         </div>

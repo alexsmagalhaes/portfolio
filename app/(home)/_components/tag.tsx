@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-export const tagVariants = cva(
+const tagVariants = cva(
   "font-sub-heading text-title-100 flex items-center justify-center rounded-[0.1875rem] border px-2 text-xs leading-none font-bold tracking-[0.05em] whitespace-nowrap uppercase h-6",
   {
     variants: {
