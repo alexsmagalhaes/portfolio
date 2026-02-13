@@ -51,7 +51,6 @@ export default function RootLayout({
       >
         <SmoothScroll>
           <Navbar />
-          <div className="h-250"></div>
           {children}
           <Footer />
         </SmoothScroll>

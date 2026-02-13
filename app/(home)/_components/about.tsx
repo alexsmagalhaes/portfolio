@@ -62,7 +62,7 @@ const STACK = [
 
 export function About() {
   return (
-    <section className="py-section-small">
+    <section className="py-section-small border-border-default border-t">
       <Container>
         <div className="gap-between-blocks-xxlarge max-w-cols-6 flex flex-col">
           <div>
