@@ -1,6 +1,7 @@
 import { Geist, JetBrains_Mono } from "next/font/google";
 
 import { Footer } from "./_components/footer";
+import { Navbar } from "./_components/navbar";
 import { SmoothScroll } from "./_components/smooth-scroll";
 import "./styles/globals.css";
 import { Icons } from "./styles/material-icons/icons";
@@ -49,7 +50,8 @@ export default function RootLayout({
         className={`${geistSans.className} ${jetBrains.variable} dark antialiased`}
       >
         <SmoothScroll>
-          <div className="h-[62.5rem]"></div>
+          <Navbar />
+          <div className="h-250"></div>
           {children}
           <Footer />
         </SmoothScroll>

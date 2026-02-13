@@ -108,7 +108,7 @@
 
 .dark {
   --title-100: rgba(255, 255, 255, 0.95);
-  --title-200: rgba(255, 255, 255, 0.95);
+  --title-200: rgba(255, 255, 255, 0.9);
 
   --body-100: rgba(196, 196, 197, 1);
   --body-200: rgba(196, 196, 197, 1);
@@ -239,8 +239,8 @@ html {
 
 @media screen and (max-width: 1440px) {
   :root {
-    --font-from: 10;
-    --font-to: 12;
+    --font-from: 12.5;
+    --font-to: 15;
     --vw-from: calc(479 / 100);
     --vw-to: calc(1440 / 100);
   }

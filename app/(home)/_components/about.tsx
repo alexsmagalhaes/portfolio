@@ -55,7 +55,7 @@ const STACK = [
   "TAG MANAGER",
   "INTELIGÊNCIA ARTIFICIAL",
   "ZUSTAND",
-  "POSTGRE SQL",
+  "POSTGRESQL",
   "CI/CD",
   "CURSOR",
 ];
