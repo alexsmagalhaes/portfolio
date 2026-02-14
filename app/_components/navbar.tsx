@@ -34,7 +34,7 @@ export function Navbar() {
   return (
     <nav className="bg-bg-theme-1 border-border-default sticky top-0 z-40 flex max-h-16 items-center border-b py-4">
       <Container className="gap-between-blocks-large grid grid-cols-3 items-center justify-between">
-        <Link className="text-title-white/50 text-lg leading-none" href="/">
+        <Link className="text-lg leading-none text-white/50" href="/">
           <span>
             &lt; <span className="text-white">AlexMagalhaes</span> /&gt;
           </span>

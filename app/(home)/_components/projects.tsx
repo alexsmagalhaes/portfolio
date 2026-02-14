@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Image1 from "@/app/_assets/images/home/project-1.jpg";
 import Image2 from "@/app/_assets/images/home/project-2.jpg";
 import Image3 from "@/app/_assets/images/home/project-3.jpg";
@@ -8,13 +6,51 @@ import Image5 from "@/app/_assets/images/home/project-5.jpg";
 import Image6 from "@/app/_assets/images/home/project-6.jpg";
 import { Container } from "@/app/_components/container";
 
+import { ProjectCard } from "./project-card";
+
 const ITEMS = [
-  { cover: Image6 },
-  { cover: Image5 },
-  { cover: Image4 },
-  { cover: Image3 },
-  { cover: Image2 },
-  { cover: Image1 },
+  {
+    cover: Image6,
+    projectName: "Restaurant Flav",
+    shortDescription:
+      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+    tags: ["Webflow", "Hotel"],
+  },
+  {
+    cover: Image5,
+    projectName: "Restaurant Flav",
+    shortDescription:
+      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+    tags: ["Webflow", "Hotel"],
+  },
+  {
+    cover: Image4,
+    projectName: "Restaurant Flav",
+    shortDescription:
+      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+    tags: ["Webflow", "Hotel"],
+  },
+  {
+    cover: Image3,
+    projectName: "Restaurant Flav",
+    shortDescription:
+      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+    tags: ["Webflow", "Hotel"],
+  },
+  {
+    cover: Image2,
+    projectName: "Restaurant Flav",
+    shortDescription:
+      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+    tags: ["Webflow", "Hotel"],
+  },
+  {
+    cover: Image1,
+    projectName: "Restaurant Flav",
+    shortDescription:
+      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+    tags: ["Webflow", "Hotel"],
+  },
 ];
 
 export function Projects() {
@@ -33,7 +69,12 @@ export function Projects() {
         <div className="gap-between-blocks-xsmall grid grid-cols-3">
           {ITEMS.map((item, index) => (
             <div key={index}>
-              <Image alt="" src={item.cover} />
+              <ProjectCard
+                cover={item.cover}
+                projectName="Restaurant Flav"
+                shortDescription="Part of my main activity includes preparing visualizations for music releases by electronic."
+                tags={["Webflow", "Hotel"]}
+              />
             </div>
           ))}
         </div>

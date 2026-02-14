@@ -232,8 +232,8 @@
 }
 
 /* :root {
-  --font-from: 14;
-  --font-to: 14;
+  --font-from: 12;
+  --font-to: 15;
   --vw-from: calc(1440 / 100);
   --vw-to: calc(2401 / 100);
   --coefficient: calc(
@@ -248,8 +248,8 @@ html {
 
 @media screen and (max-width: 1440px) {
   :root {
-    --font-from: 12.5;
-    --font-to: 15;
+    --font-from: 11;
+    --font-to: 14;
     --vw-from: calc(479 / 100);
     --vw-to: calc(1440 / 100);
   }

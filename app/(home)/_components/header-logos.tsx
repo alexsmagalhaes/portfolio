@@ -41,7 +41,7 @@ const ITEMS = [
 
 export function HeaderLogos() {
   return (
-    <div className="relative w-full overflow-hidden opacity-70">
+    <div className="relative w-full overflow-hidden opacity-60">
       <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 left-0 z-10 h-full w-54 bg-linear-to-r from-15% to-transparent" />
 
       <div className="overflow-hidden whitespace-nowrap">
