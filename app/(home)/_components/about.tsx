@@ -66,7 +66,9 @@ export function About() {
       <Container>
         <div className="gap-between-blocks-xxlarge max-w-cols-6 flex flex-col">
           <div>
-            <h2 className="mb-between-title-text">Experiência e tecnologias</h2>
+            <h2 className="mb-between-title-text h3">
+              Experiência e tecnologias
+            </h2>
             <div>
               Each IOH module is built for implementation — not just
               information. With structured frameworks, clinical depth, and
@@ -81,7 +83,9 @@ export function About() {
           </div>
 
           <div>
-            <h3 className="mb-between-blocks-xsmall">Minha Stack:</h3>
+            <div className="mb-between-blocks-xsmall text-base">
+              Minha Stack:
+            </div>
             <div className="gap-between-blocks-tiny flex flex-wrap">
               {STACK.map((item, index) => (
                 <Tag key={index} variant="gray">
@@ -92,9 +96,9 @@ export function About() {
           </div>
 
           <div>
-            <h3 className="mb-between-blocks-xsmall">
+            <div className="mb-between-blocks-xsmall text-base">
               Experiências relevantes:
-            </h3>
+            </div>
 
             {EXPERIENCES.map((item, index) => (
               <ExperienceItem

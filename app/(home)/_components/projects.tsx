@@ -22,7 +22,7 @@ export function Projects() {
     <section className="py-section-tiny border-border-default border-t">
       <Container className="gap-between-blocks-xxlarge flex flex-col">
         <div className="max-w-cols-5">
-          <h2 className="mb-between-title-text">
+          <h2 className="mb-between-title-text h3">
             Experiência e projetos entregues
           </h2>
           <div>

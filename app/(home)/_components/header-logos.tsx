@@ -32,9 +32,9 @@ const ITEMS = [
   { src: Image11, alt: "" },
   { src: Image12, alt: "" },
   { src: Image13, alt: "" },
-  { src: Image14, alt: "" },
   { src: Image9, alt: "" },
   { src: Image15, alt: "" },
+  { src: Image14, alt: "" },
   { src: Image16, alt: "" },
   { src: Image17, alt: "" },
 ];
@@ -42,7 +42,7 @@ const ITEMS = [
 export function HeaderLogos() {
   return (
     <div className="relative w-full overflow-hidden opacity-70">
-      <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 left-0 z-10 h-full w-54 bg-linear-to-r to-transparent" />
+      <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 left-0 z-10 h-full w-54 bg-linear-to-r from-15% to-transparent" />
 
       <div className="overflow-hidden whitespace-nowrap">
         <div className="hover:paused inline-flex w-max animate-[logo-scroll_60s_linear_infinite]">

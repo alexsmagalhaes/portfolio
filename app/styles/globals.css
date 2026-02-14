@@ -152,7 +152,7 @@
   .h5,
   .h6 {
     font-family: var(--font-heading);
-    @apply text-title-100 leading-[1.3] font-[450];
+    @apply text-title-100 leading-[1.3] font-[450] tracking-[0.02em];
   }
 
   h1,
