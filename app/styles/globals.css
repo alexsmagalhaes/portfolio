@@ -216,6 +216,15 @@
       @apply text-[0.9375rem];
     }
   }
+
+  @keyframes logo-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @utility no-scrollbar {
