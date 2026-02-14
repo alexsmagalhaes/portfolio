@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 
+import Image1 from "@/app/_assets/images/home/about-bg.svg";
 import { Container } from "@/app/_components/container";
 import { Button } from "@/components/ui/button";
 
@@ -62,8 +64,16 @@ const STACK = [
 
 export function About() {
   return (
-    <section className="py-section-small border-border-default border-t">
-      <Container>
+    <section className="py-section-small border-border-default relative border-t">
+      <Image
+        className="absolute inset-0 h-full w-full"
+        alt=""
+        height={1036}
+        src={Image1}
+        width={1440}
+      />
+
+      <Container className="relative z-10">
         <div className="gap-between-blocks-xxlarge max-w-cols-6 flex flex-col">
           <div>
             <h2 className="mb-between-title-text h3">
