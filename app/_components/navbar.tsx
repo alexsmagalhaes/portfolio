@@ -35,7 +35,7 @@ export function Navbar() {
     <nav className="bg-bg-theme-1 border-border-default sticky top-0 z-40 flex max-h-16 items-center border-b py-4">
       <Container className="gap-between-blocks-large flex grid-cols-3 items-center justify-between lg:grid">
         <Link
-          className="text-[1.0625rem] leading-none whitespace-nowrap text-white/50 sm:text-lg"
+          className="text-lg leading-none whitespace-nowrap text-white/50"
           href="/"
         >
           <span>
@@ -55,7 +55,7 @@ export function Navbar() {
         </div>
 
         <div className="gap-between-buttons flex justify-end">
-          <Button className="size-7 sm:size-8" square variant="outline">
+          <Button className="size-8" square variant="outline">
             <Image
               className="size-4 lg:size-3.5"
               priority
@@ -65,7 +65,7 @@ export function Navbar() {
               width={16}
             />
           </Button>
-          <Button className="h-7 px-2 text-[0.6875rem] sm:h-8 sm:px-4 sm:text-xs">
+          <Button className="h-8 px-4 text-xs">
             <span className="sm:hidden">Resume</span>{" "}
             <span className="hidden sm:inline-block">Baixar - CV</span>
           </Button>
