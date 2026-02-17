@@ -4,7 +4,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "rounded-default inline-flex items-center justify-center border text-xs whitespace-nowrap tracking-[0.05em] text-white uppercase outline-none gap-inner-gap",
+  `
+  rounded-default
+  inline-flex items-center justify-center
+  border text-xs whitespace-nowrap
+  tracking-[0.05em] text-white uppercase
+  outline-none gap-inner-gap cursor-pointer
+
+  relative overflow-hidden
+
+  before:absolute before:inset-y-0 before:left-0
+  before:w-0 before:bg-white/5
+  before:transition-all before:duration-400
+  hover:before:w-full
+  `,
   {
     variants: {
       variant: {
@@ -29,6 +42,7 @@ export function Button({
   size = "md",
   square = false,
   asChild = false,
+  children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
@@ -49,6 +63,8 @@ export function Button({
       data-square={square ? "true" : "false"}
       data-variant={variant}
       {...props}
-    />
+    >
+      <span className="relative z-10">{children}</span>
+    </Comp>
   );
 }

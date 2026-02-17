@@ -257,9 +257,9 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-/* :root {
+:root {
   --font-from: 12;
-  --font-to: 15;
+  --font-to: 14;
   --vw-from: calc(1440 / 100);
   --vw-to: calc(2401 / 100);
   --coefficient: calc(
@@ -288,7 +288,7 @@ html {
     --vw-from: calc(1 / 100);
     --vw-to: calc(479 / 100);
   }
-} */
+}
 
 :root {
   --selection-bg: #2c2a2e;

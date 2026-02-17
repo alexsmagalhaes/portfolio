@@ -11,6 +11,7 @@ import { Tag } from "./tag";
 interface ProjectCardProps {
   projectName: string;
   video: string;
+  href?: string;
   videoCover: StaticImageData;
   cover: StaticImageData;
   tags: string[];
@@ -18,6 +19,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({
+  href,
   cover,
   video,
   videoCover,
@@ -26,7 +28,7 @@ export function ProjectCard({
   tags,
 }: Readonly<ProjectCardProps>) {
   return (
-    <Link className="rounded-default relative overflow-clip" href="">
+    <Link className="rounded-default relative overflow-clip" href={href || "#"}>
       <Image
         className="absolute inset-0 z-0 size-full w-full"
         alt={projectName}
@@ -42,7 +44,7 @@ export function ProjectCard({
           className="text-title-100 flex items-center justify-between text-base"
           title={projectName}
         >
-          {projectName} <Icon name="arrow_outward" size={24} />
+          {projectName} {href && <Icon name="arrow_outward" size={24} />}
         </div>
 
         <div className="rounded-default relative aspect-[1.8] grow overflow-clip shadow-xl">
