@@ -1,5 +1,6 @@
 import { Geist, JetBrains_Mono } from "next/font/google";
 
+import { Analytics } from "./_components/analytics";
 import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
 import { SmoothScroll } from "./_components/smooth-scroll";
@@ -64,6 +65,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
