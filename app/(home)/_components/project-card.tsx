@@ -23,9 +23,10 @@ export function ProjectCard({
   return (
     <Link className="rounded-default relative overflow-clip" href="">
       <Image
+        className="w-full"
         alt={projectName}
         height={374}
-        className="w-full"
+        loading="eager"
         placeholder="blur"
         src={cover}
         width={442}

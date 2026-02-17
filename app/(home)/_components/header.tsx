@@ -11,7 +11,8 @@ export function Header() {
   return (
     <header className="py-section-tiny sm:py-section-small relative overflow-clip">
       <Image
-        className="absolute inset-0 h-full w-full opacity-30"
+        className="absolute inset-0 h-full w-full opacity-40"
+        priority
         alt=""
         height={478}
         loading="eager"

@@ -17,6 +17,7 @@ export function Footer() {
           className="col-span-2 w-full sm:hidden"
           alt="Alex desenvolvendo um projeto para um cliente"
           height={564}
+          loading="eager"
           src={Image1}
           width={296}
         />
@@ -25,6 +26,7 @@ export function Footer() {
             className="hidden w-14 sm:block"
             alt="Alex desenvolvendo um projeto para um cliente"
             height={56}
+            loading="eager"
             src={Image1}
             width={112}
           />

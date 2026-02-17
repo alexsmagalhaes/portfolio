@@ -66,9 +66,10 @@ export function About() {
   return (
     <section className="py-section-small border-border-default relative border-t">
       <Image
-        className="absolute inset-0 h-full w-full opacity-30"
+        className="absolute inset-0 h-full w-full opacity-40"
         alt=""
         height={1036}
+        loading="eager"
         src={Image1}
         width={1440}
       />

@@ -289,3 +289,32 @@ html {
     --vw-to: calc(479 / 100);
   }
 }
+
+:root {
+  --selection-bg: #2c2a2e;
+  --selection-color: #ffffff;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
+}
+
+::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
+}
+
+input::selection,
+textarea::selection,
+select::selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
+}
+
+input::-moz-selection,
+textarea::-moz-selection,
+select::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
+}

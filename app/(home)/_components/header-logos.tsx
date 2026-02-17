@@ -51,7 +51,7 @@ export function HeaderLogos() {
               key={index}
               className="px-between-blocks-medium flex shrink-0 items-center"
             >
-              <Image alt={item.alt} loading="eager" src={item.src} />
+              <Image priority alt={item.alt} loading="eager" src={item.src} />
             </div>
           ))}
 
@@ -60,7 +60,7 @@ export function HeaderLogos() {
               key={index}
               className="px-between-blocks-medium flex shrink-0 items-center"
             >
-              <Image alt={item.alt} src={item.src} />
+              <Image priority alt={item.alt} src={item.src} />
             </div>
           ))}
         </div>
