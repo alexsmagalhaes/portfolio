@@ -25,6 +25,7 @@ export function ProjectCard({
       <Image
         alt={projectName}
         height={374}
+        className="w-full"
         placeholder="blur"
         src={cover}
         width={442}

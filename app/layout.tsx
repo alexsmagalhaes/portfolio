@@ -3,6 +3,7 @@ import { Geist, JetBrains_Mono } from "next/font/google";
 import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
 import { SmoothScroll } from "./_components/smooth-scroll";
+import { generateBaseMetadata } from "./_utils/generate-base-metadata";
 import "./styles/globals.css";
 import { Icons } from "./styles/material-icons/icons";
 
@@ -35,6 +36,15 @@ const jetBrains = JetBrains_Mono({
     "sans-serif",
   ],
 });
+
+export function generateMetadata() {
+  return generateBaseMetadata({
+    url: "/",
+    title: "Alex Magalhães - Dev",
+    description:
+      "Pare de reinventar a roda. Enquanto outros desenvolvedores ainda configuram login, você já estará coletando feedback.",
+  });
+}
 
 export default function RootLayout({
   children,

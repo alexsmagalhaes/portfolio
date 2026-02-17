@@ -9,9 +9,9 @@ import { Tag } from "./tag";
 
 export function Header() {
   return (
-    <header className="py-section-small relative overflow-clip">
+    <header className="py-section-tiny sm:py-section-small relative overflow-clip">
       <Image
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full opacity-30"
         alt=""
         height={478}
         loading="eager"
@@ -20,7 +20,7 @@ export function Header() {
       />
 
       <Container className="relative z-10">
-        <div className="max-w-cols-5 flex flex-col items-start">
+        <div className="lg:max-w-cols-5 flex flex-col items-start">
           <Tag>Dev. fullstack e Webflow</Tag>
           <h1 className="mb-between-title-text mt-between-blocks-large h2">
             Desenvolvo soluções digitais escaláveis e com resultados
@@ -31,7 +31,7 @@ export function Header() {
           </div>
         </div>
 
-        <div className="gap-between-blocks-large flex">
+        <div className="gap-between-blocks-xxlarge lg:gap-between-blocks-large flex flex-col items-start lg:flex-row">
           <Button>Entre em contato</Button>
 
           <HeaderLogos />

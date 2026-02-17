@@ -42,7 +42,7 @@ const ITEMS = [
 export function HeaderLogos() {
   return (
     <div className="relative w-full overflow-hidden opacity-60">
-      <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 left-0 z-10 h-full w-54 bg-linear-to-r from-15% to-transparent" />
+      <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 left-0 z-10 h-full w-41 bg-linear-to-r to-transparent lg:w-54 lg:from-15%" />
 
       <div className="overflow-hidden whitespace-nowrap">
         <div className="hover:paused inline-flex w-max animate-[logo-scroll_60s_linear_infinite]">
@@ -66,7 +66,7 @@ export function HeaderLogos() {
         </div>
       </div>
 
-      <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 right-0 z-10 h-full w-54 bg-linear-to-l to-transparent" />
+      <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 right-0 z-10 h-full w-41 bg-linear-to-l to-transparent lg:w-54" />
     </div>
   );
 }

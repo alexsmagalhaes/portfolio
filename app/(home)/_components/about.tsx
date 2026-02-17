@@ -31,7 +31,7 @@ export function ExperienceItem({
 }: Readonly<ExperienceItemProps>) {
   return (
     <div className="border-border-default py-between-blocks-medium border-t">
-      <div className="mb-between-blocks-medium font-sub-heading text-title-100 leading-none font-bold tracking-[0.05em] uppercase">
+      <div className="mb-between-blocks-medium font-sub-heading text-title-100 leading-snug font-bold tracking-[0.05em] uppercase sm:leading-none">
         {title}
       </div>
 
@@ -66,7 +66,7 @@ export function About() {
   return (
     <section className="py-section-small border-border-default relative border-t">
       <Image
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full opacity-30"
         alt=""
         height={1036}
         src={Image1}
@@ -74,7 +74,7 @@ export function About() {
       />
 
       <Container className="relative z-10">
-        <div className="gap-between-blocks-xxlarge max-w-cols-6 flex flex-col">
+        <div className="gap-between-blocks-xxlarge lg:max-w-cols-6 flex flex-col">
           <div>
             <h2 className="mb-between-title-text h3">
               Experiência e tecnologias

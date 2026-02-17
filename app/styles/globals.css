@@ -257,7 +257,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-/* :root {
+:root {
   --font-from: 12;
   --font-to: 15;
   --vw-from: calc(1440 / 100);
@@ -288,4 +288,4 @@ html {
     --vw-from: calc(1 / 100);
     --vw-to: calc(479 / 100);
   }
-} */
+}

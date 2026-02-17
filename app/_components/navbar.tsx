@@ -33,14 +33,17 @@ const ITEMS = [
 export function Navbar() {
   return (
     <nav className="bg-bg-theme-1 border-border-default sticky top-0 z-40 flex max-h-16 items-center border-b py-4">
-      <Container className="gap-between-blocks-large grid grid-cols-3 items-center justify-between">
-        <Link className="text-lg leading-none text-white/50" href="/">
+      <Container className="gap-between-blocks-large flex grid-cols-3 items-center justify-between lg:grid">
+        <Link
+          className="text-[1.0625rem] leading-none whitespace-nowrap text-white/50 sm:text-lg"
+          href="/"
+        >
           <span>
             &lt; <span className="text-white">AlexMagalhaes</span> /&gt;
           </span>
         </Link>
 
-        <div className="gap-between-buttons flex items-center justify-center">
+        <div className="gap-between-blocks-medium hidden items-center justify-center lg:flex">
           {ITEMS.map((item, index) => (
             <NavbarLink
               key={index}
@@ -52,10 +55,13 @@ export function Navbar() {
         </div>
 
         <div className="gap-between-buttons flex justify-end">
-          <Button square variant="outline">
+          <Button className="size-7 sm:size-8" square variant="outline">
             <Image alt="Github" height={16} src={Image1} width={16} />
           </Button>
-          <Button>Baixar - CV</Button>
+          <Button className="h-7 px-2 text-[0.6875rem] sm:h-8 sm:px-4 sm:text-xs">
+            <span className="sm:hidden">Resume</span>{" "}
+            <span className="hidden sm:inline-block">Baixar - CV</span>
+          </Button>
         </div>
       </Container>
     </nav>

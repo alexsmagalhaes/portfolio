@@ -57,7 +57,7 @@ export function Projects() {
   return (
     <section className="py-section-tiny border-border-default border-t">
       <Container className="gap-between-blocks-xxlarge flex flex-col">
-        <div className="max-w-cols-5">
+        <div className="lg:max-w-cols-5">
           <h2 className="mb-between-title-text h3">
             Experiência e projetos entregues
           </h2>
@@ -66,7 +66,7 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="gap-between-blocks-xsmall grid grid-cols-3">
+        <div className="gap-between-blocks-xsmall grid sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, index) => (
             <div key={index}>
               <ProjectCard
