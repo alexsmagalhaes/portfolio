@@ -69,7 +69,7 @@ export function About() {
       className="py-section-small border-border-default relative border-t"
     >
       <Image
-        className="absolute inset-0 h-full w-full opacity-15"
+        className="absolute inset-0 h-full w-full opacity-40 md:opacity-20"
         alt=""
         height={1036}
         loading="eager"
