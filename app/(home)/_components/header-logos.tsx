@@ -52,7 +52,7 @@ export function HeaderLogos() {
               className="px-between-blocks-medium flex shrink-0 items-center"
             >
               <Image
-                className="scale-85"
+                className="scale-90"
                 priority
                 alt={item.alt}
                 loading="eager"
@@ -64,10 +64,10 @@ export function HeaderLogos() {
           {ITEMS.map((item, index) => (
             <div
               key={index}
-              className="px-between-blocks-medium flex shrink-0 items-center lg:scale-100"
+              className="px-between-blocks-medium flex shrink-0 items-center"
             >
               <Image
-                className="scale-85"
+                className="scale-90"
                 priority
                 alt={item.alt}
                 src={item.src}

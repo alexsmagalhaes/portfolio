@@ -23,7 +23,7 @@ const ITEMS = [
     projectName: "Casa Teçá Guriú",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow"],
+    tags: ["Webflow", "Metrificação"],
   },
   {
     cover: Image5,
@@ -33,7 +33,7 @@ const ITEMS = [
     projectName: "Rede de Mar - Condo Hoteis",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Hotel"],
+    tags: ["Next JS", "Design System", "i18n"],
   },
   {
     cover: Image4,
@@ -43,7 +43,7 @@ const ITEMS = [
     projectName: "Kilombo Villas",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Hotel"],
+    tags: ["Webflow", "Metrificação", "Design System"],
   },
   {
     cover: Image3,
@@ -52,7 +52,7 @@ const ITEMS = [
     projectName: "Cotaindie - Sistemas Industriais",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Hotel"],
+    tags: ["Next Js", "Supabase", "Postgree", "API"],
   },
   {
     cover: Image2,
@@ -61,7 +61,7 @@ const ITEMS = [
     projectName: "IBF - Industria de Telhas",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Hotel"],
+    tags: ["Webflow", "Metrificação"],
   },
   {
     cover: Image1,
@@ -71,7 +71,7 @@ const ITEMS = [
     projectName: "Escritório Serrão de Castro",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Hotel"],
+    tags: ["Next Js", "Metrificação", "I18N"],
   },
 ];
 
