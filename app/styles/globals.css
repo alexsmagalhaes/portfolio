@@ -188,32 +188,32 @@
   @media (max-width: 1023px) {
     h1,
     .h1 {
-      @apply text-[1.5625rem];
+      @apply text-[1.75rem];
     }
 
     h2,
     .h2 {
-      @apply text-[1.4375rem];
+      @apply text-[1.625rem];
     }
 
     h3,
     .h3 {
-      @apply text-[1.3125rem];
+      @apply text-[1.5rem];
     }
 
     h4,
     .h4 {
-      @apply text-[1.1875rem];
+      @apply text-[1.375rem];
     }
 
     h5,
     .h5 {
-      @apply text-[1.0625rem];
+      @apply text-[1.25rem];
     }
 
     h6,
     .h6 {
-      @apply text-[0.9375rem];
+      @apply text-[1.125rem];
     }
   }
 
