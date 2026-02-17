@@ -56,7 +56,14 @@ export function Navbar() {
 
         <div className="gap-between-buttons flex justify-end">
           <Button className="size-7 sm:size-8" square variant="outline">
-            <Image priority alt="Github" height={16} src={Image1} width={16} />
+            <Image
+              className="size-4 lg:size-3.5"
+              priority
+              alt="Github"
+              height={16}
+              src={Image1}
+              width={16}
+            />
           </Button>
           <Button className="h-7 px-2 text-[0.6875rem] sm:h-8 sm:px-4 sm:text-xs">
             <span className="sm:hidden">Resume</span>{" "}

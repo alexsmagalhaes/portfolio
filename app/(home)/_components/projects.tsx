@@ -1,9 +1,15 @@
+import Cover6 from "@/app/_assets/images/home/casa-teca-cover.png";
+import Cover5 from "@/app/_assets/images/home/club-de-mar-cover.png";
+import Cover3 from "@/app/_assets/images/home/cotaindie-cover.png";
+import Cover2 from "@/app/_assets/images/home/ibf-cover.png";
+import Cover4 from "@/app/_assets/images/home/kilombo-villas-cover.png";
 import Image1 from "@/app/_assets/images/home/project-1.jpg";
 import Image2 from "@/app/_assets/images/home/project-2.jpg";
 import Image3 from "@/app/_assets/images/home/project-3.jpg";
 import Image4 from "@/app/_assets/images/home/project-4.jpg";
 import Image5 from "@/app/_assets/images/home/project-5.jpg";
 import Image6 from "@/app/_assets/images/home/project-6.jpg";
+import Cover1 from "@/app/_assets/images/home/serrao-de-castro-cover.png";
 import { Container } from "@/app/_components/container";
 
 import { ProjectCard } from "./project-card";
@@ -11,42 +17,58 @@ import { ProjectCard } from "./project-card";
 const ITEMS = [
   {
     cover: Image6,
-    projectName: "Restaurant Flav",
+    video:
+      "https://wexoor92cdqpulec.public.blob.vercel-storage.com/casa-teca.mp4",
+    videoCover: Cover6,
+    projectName: "Casa Teçá Guriú",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Hotel"],
+    tags: ["Webflow"],
   },
   {
     cover: Image5,
-    projectName: "Restaurant Flav",
+    video:
+      "https://wexoor92cdqpulec.public.blob.vercel-storage.com/club-de-mar.mp4",
+    videoCover: Cover5,
+    projectName: "Rede de Mar - Condo Hoteis",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
     tags: ["Webflow", "Hotel"],
   },
   {
     cover: Image4,
-    projectName: "Restaurant Flav",
+    video:
+      "https://wexoor92cdqpulec.public.blob.vercel-storage.com/kilombo-villas.mp4",
+    videoCover: Cover4,
+    projectName: "Kilombo Villas",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
     tags: ["Webflow", "Hotel"],
   },
   {
     cover: Image3,
-    projectName: "Restaurant Flav",
+    video: "https://wexoor92cdqpulec.public.blob.vercel-storage.com/cotaindie",
+    videoCover: Cover3,
+    projectName: "Cotaindie - Sistemas Industriais",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
     tags: ["Webflow", "Hotel"],
   },
   {
     cover: Image2,
-    projectName: "Restaurant Flav",
+    video: "https://wexoor92cdqpulec.public.blob.vercel-storage.com/ibf.mp4",
+    videoCover: Cover2,
+    projectName: "IBF - Industria de Telhas",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
     tags: ["Webflow", "Hotel"],
   },
   {
     cover: Image1,
-    projectName: "Restaurant Flav",
+    video:
+      "https://wexoor92cdqpulec.public.blob.vercel-storage.com/serrao-de-castro.mp4",
+    videoCover: Cover1,
+    projectName: "Escritório Serrão de Castro",
     shortDescription:
       "Part of my main activity includes preparing visualizations for music releases by electronic.",
     tags: ["Webflow", "Hotel"],
@@ -74,9 +96,11 @@ export function Projects() {
             <div key={index}>
               <ProjectCard
                 cover={item.cover}
-                projectName="Restaurant Flav"
-                shortDescription="Part of my main activity includes preparing visualizations for music releases by electronic."
-                tags={["Webflow", "Hotel"]}
+                projectName={item.projectName}
+                shortDescription={item.shortDescription}
+                tags={item.tags}
+                video={item.video}
+                videoCover={item.videoCover}
               />
             </div>
           ))}

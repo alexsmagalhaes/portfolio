@@ -257,7 +257,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-:root {
+/* :root {
   --font-from: 12;
   --font-to: 15;
   --vw-from: calc(1440 / 100);
@@ -274,7 +274,7 @@ html {
 
 @media screen and (max-width: 1440px) {
   :root {
-    --font-from: 11;
+    --font-from: 12;
     --font-to: 14;
     --vw-from: calc(479 / 100);
     --vw-to: calc(1440 / 100);
@@ -288,7 +288,7 @@ html {
     --vw-from: calc(1 / 100);
     --vw-to: calc(479 / 100);
   }
-}
+} */
 
 :root {
   --selection-bg: #2c2a2e;

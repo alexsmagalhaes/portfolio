@@ -41,7 +41,7 @@ const ITEMS = [
 
 export function HeaderLogos() {
   return (
-    <div className="relative w-full overflow-hidden opacity-60">
+    <div className="relative w-full overflow-hidden opacity-65">
       <div className="from-bg-theme-1 pointer-events-none absolute inset-y-0 left-0 z-10 h-full w-41 bg-linear-to-r to-transparent lg:w-54 lg:from-15%" />
 
       <div className="overflow-hidden whitespace-nowrap">
@@ -51,16 +51,27 @@ export function HeaderLogos() {
               key={index}
               className="px-between-blocks-medium flex shrink-0 items-center"
             >
-              <Image priority alt={item.alt} loading="eager" src={item.src} />
+              <Image
+                className="scale-85"
+                priority
+                alt={item.alt}
+                loading="eager"
+                src={item.src}
+              />
             </div>
           ))}
 
           {ITEMS.map((item, index) => (
             <div
               key={index}
-              className="px-between-blocks-medium flex shrink-0 items-center"
+              className="px-between-blocks-medium flex shrink-0 items-center lg:scale-100"
             >
-              <Image priority alt={item.alt} src={item.src} />
+              <Image
+                className="scale-85"
+                priority
+                alt={item.alt}
+                src={item.src}
+              />
             </div>
           ))}
         </div>
