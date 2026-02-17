@@ -64,7 +64,10 @@ const STACK = [
 
 export function About() {
   return (
-    <section className="py-section-small border-border-default relative border-t">
+    <section
+      id="about"
+      className="py-section-small border-border-default relative border-t"
+    >
       <Image
         className="absolute inset-0 h-full w-full opacity-40"
         alt=""

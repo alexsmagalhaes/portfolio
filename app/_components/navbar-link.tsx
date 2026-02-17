@@ -14,7 +14,7 @@ export function NavbarLink({ sectionId, text, icon }: Readonly<NavbarLink>) {
   const lenis = useLenis();
 
   function handleClick() {
-    lenis?.scrollTo(sectionId, { offset: 64 });
+    lenis?.scrollTo(`#${sectionId}`, { offset: -32 });
   }
 
   return (

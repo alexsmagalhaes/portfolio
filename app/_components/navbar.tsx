@@ -15,17 +15,17 @@ const ITEMS = [
   },
   {
     text: "Projetos",
-    sectionId: "",
+    sectionId: "projects",
     icon: "folder_code",
   },
   {
     text: "Sobre",
-    sectionId: "",
+    sectionId: "about",
     icon: "table_chart_view",
   },
   {
     text: "Contatos",
-    sectionId: "",
+    sectionId: "contacts",
     icon: "call",
   },
 ];

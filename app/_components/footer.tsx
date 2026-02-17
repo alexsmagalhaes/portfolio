@@ -11,7 +11,7 @@ export function Footer() {
   const time = getCurrentTime();
 
   return (
-    <footer className="border-border-default border-t py-4.5">
+    <footer id="contacts" className="border-border-default border-t py-4.5">
       <Container className="gap-between-blocks-large grid w-full grid-cols-2 items-center md:grid-cols-3 lg:flex lg:items-center lg:justify-between">
         <Image
           className="col-span-2 w-full sm:hidden"

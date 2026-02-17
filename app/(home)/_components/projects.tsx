@@ -55,7 +55,10 @@ const ITEMS = [
 
 export function Projects() {
   return (
-    <section className="py-section-tiny border-border-default border-t">
+    <section
+      id="projects"
+      className="py-section-tiny border-border-default border-t"
+    >
       <Container className="gap-between-blocks-xxlarge flex flex-col">
         <div className="lg:max-w-cols-5">
           <h2 className="mb-between-title-text h3">
