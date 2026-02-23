@@ -8,7 +8,7 @@ import Image12 from "@/app/_assets/images/home/client-12.svg";
 import Image13 from "@/app/_assets/images/home/client-13.svg";
 import Image14 from "@/app/_assets/images/home/client-14.svg";
 import Image15 from "@/app/_assets/images/home/client-15.svg";
-import Image16 from "@/app/_assets/images/home/client-16.svg";
+// Import Image16 from "@/app/_assets/images/home/client-16.svg";
 import Image17 from "@/app/_assets/images/home/client-17.svg";
 import Image2 from "@/app/_assets/images/home/client-2.svg";
 import Image3 from "@/app/_assets/images/home/client-3.svg";
@@ -35,7 +35,7 @@ const ITEMS = [
   { src: Image9, alt: "" },
   { src: Image15, alt: "" },
   { src: Image14, alt: "" },
-  { src: Image16, alt: "" },
+  // { src: Image16, alt: "" },
   { src: Image17, alt: "" },
 ];
 

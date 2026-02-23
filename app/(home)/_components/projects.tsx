@@ -31,6 +31,7 @@ const ITEMS = [
     video:
       "https://wexoor92cdqpulec.public.blob.vercel-storage.com/club-de-mar.mp4",
     videoCover: Cover5,
+    href: "https://www.clubdemar.com.br/",
     projectName: "Rede de Mar - Condo Hoteis",
     shortDescription:
       "Criação de um ecosistema digital para as marcas do grupo e integrações com serviços de terceiros.",
@@ -41,6 +42,7 @@ const ITEMS = [
     video:
       "https://wexoor92cdqpulec.public.blob.vercel-storage.com/kilombo-villas.mp4",
     videoCover: Cover4,
+    href: "https://kilombovillas.com/",
     projectName: "Kilombo Villas",
     shortDescription:
       "Aplicação desenvolvida para gestão de campanhas, automação de processos e ampliação do alcance.",
@@ -59,6 +61,7 @@ const ITEMS = [
     cover: Image2,
     video: "https://wexoor92cdqpulec.public.blob.vercel-storage.com/ibf.mp4",
     videoCover: Cover2,
+    href: "https://www.ibf.ind.br/",
     projectName: "IBF - Industria de Telhas",
     shortDescription:
       "Projeto focado na integração com anúncios para crescimento de alcance e conversão da marca.",
