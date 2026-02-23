@@ -20,10 +20,11 @@ const ITEMS = [
     video:
       "https://wexoor92cdqpulec.public.blob.vercel-storage.com/casa-teca.mp4",
     videoCover: Cover6,
+    href: "https://casatecaguriu.com.br/",
     projectName: "Casa Teçá Guriú",
     shortDescription:
-      "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Metrificação"],
+      "Projeto voltado à ampliação do alcance da marca no Google com SEO local.",
+    tags: ["Webflow", "Metrificação", "Client First"],
   },
   {
     cover: Image5,
@@ -32,7 +33,7 @@ const ITEMS = [
     videoCover: Cover5,
     projectName: "Rede de Mar - Condo Hoteis",
     shortDescription:
-      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+      "Criação de um ecosistema digital para as marcas do grupo e integrações com serviços de terceiros.",
     tags: ["Next JS", "Design System", "i18n"],
   },
   {
@@ -42,8 +43,8 @@ const ITEMS = [
     videoCover: Cover4,
     projectName: "Kilombo Villas",
     shortDescription:
-      "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Metrificação", "Design System"],
+      "Aplicação desenvolvida para gestão de campanhas, automação de processos e ampliação do alcance.",
+    tags: ["Webflow", "Metrificação", "Automações"],
   },
   {
     cover: Image3,
@@ -51,7 +52,7 @@ const ITEMS = [
     videoCover: Cover3,
     projectName: "Cotaindie - Sistemas Industriais",
     shortDescription:
-      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+      "Sistema de emissão de documentos com geração de planos inteligentes para otimização do uso de materiais.",
     tags: ["Next Js", "Supabase", "Postgree", "API"],
   },
   {
@@ -60,8 +61,8 @@ const ITEMS = [
     videoCover: Cover2,
     projectName: "IBF - Industria de Telhas",
     shortDescription:
-      "Part of my main activity includes preparing visualizations for music releases by electronic.",
-    tags: ["Webflow", "Metrificação"],
+      "Projeto focado na integração com anúncios para crescimento de alcance e conversão da marca.",
+    tags: ["Webflow", "Metrificação", "Client First"],
   },
   {
     cover: Image1,
@@ -70,7 +71,7 @@ const ITEMS = [
     videoCover: Cover1,
     projectName: "Escritório Serrão de Castro",
     shortDescription:
-      "Part of my main activity includes preparing visualizations for music releases by electronic.",
+      "Reformulação do site focada na expansão do alcance na Europa via anúncios e SEO.",
     tags: ["Next Js", "Metrificação", "I18N"],
   },
 ];
@@ -83,11 +84,10 @@ export function Projects() {
     >
       <Container className="gap-between-blocks-xxlarge flex flex-col">
         <div className="lg:max-w-cols-5">
-          <h2 className="mb-between-title-text h3">
-            Experiência e projetos entregues
-          </h2>
+          <h2 className="mb-between-title-text h3">Projetos desenvolvidos</h2>
           <div>
-            Each IOH module is built for implementation — not just information.
+            Aplicações que desenvolvi para empresas que precisavam aprimorar
+            processos, cortar custos e aumentar o alcance digital.
           </div>
         </div>
 
@@ -96,6 +96,7 @@ export function Projects() {
             <div key={index}>
               <ProjectCard
                 cover={item.cover}
+                href={item.href}
                 projectName={item.projectName}
                 shortDescription={item.shortDescription}
                 tags={item.tags}

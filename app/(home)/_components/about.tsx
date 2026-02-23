@@ -3,39 +3,63 @@ import Link from "next/link";
 
 import Image1 from "@/app/_assets/images/home/about-bg.svg";
 import { Container } from "@/app/_components/container";
+import { URLS_ACTIONS } from "@/app/constants/urls-action";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 import { Tag } from "./tag";
 
-export const EXPERIENCES = [
+export const CERTIFICATIONS = [
   {
-    title: "Dev. Full Stack - dewe.dev - 2025 a 2026",
-    description:
-      "Each IOH module is built for implementation — not just information. With structured frameworks, clinical depth, and real-world relevance, you’ll gain the confidence to treat the root cause, not just chase symptoms",
+    title: "Ciências da Computação - IFCE",
+    period: " - 2022 a (em andamento)",
   },
   {
-    title: "Dev. Front-End - Quarto de Ideias - 2022 a 2025",
+    title: "Técnico em informática",
+    period: " - 2017 a 2019",
+  },
+];
+
+export const EXPERIENCES = [
+  {
+    title: "Dev. full stack - dewe.dev",
+    period: " - 2024 até o momento",
     description:
-      "Each IOH module is built for implementation — not just information. With structured frameworks, clinical depth, and real-world relevance, you’ll gain the confidence to treat the root cause, not just chase symptoms",
+      "Desenvolvimento de soluções para clientes: pequenos sistemas, integrações com serviços de terceiros por meio de apis rest e otimizações em aplicações e códigos já existentes. Aplicando conceitos de organização de código, boas práticas de desenvolvimento e otimização.",
+  },
+  {
+    title: "Dev. front-end - quarto de ideias",
+    period: " - 2021 a 2024",
+    description:
+      "Atuação na criação de interfaces (UI e UX) e no desenvolvimento de automações e pequenas aplicações do design até o desenvolvimento e deployment  para clientes de diversos nichos. Aplicação de padrões de projeto, boas práticas e foco na performance e escalabilidade.",
   },
 ];
 
 type ExperienceItemProps = {
   title: string;
-  description: string;
+  description?: string;
+  period: string;
+  className?: string;
 };
 
 export function ExperienceItem({
   title,
   description,
+  period,
+  className,
 }: Readonly<ExperienceItemProps>) {
   return (
-    <div className="border-border-default py-between-blocks-medium border-t">
+    <div
+      className={cn(
+        "border-border-default py-between-blocks-medium border-t",
+        className,
+      )}
+    >
       <div className="mb-between-blocks-medium font-sub-heading text-title-100 leading-snug font-bold tracking-[0.05em] uppercase sm:leading-none">
-        {title}
+        {title} <span className="text-title-100/50 inline">{period}</span>
       </div>
 
-      <div>{description}</div>
+      {description && <div>{description}</div>}
     </div>
   );
 }
@@ -55,11 +79,13 @@ const STACK = [
   "UI UX DESIGN",
   "TAILWIND CSS",
   "TAG MANAGER",
+  "ANALYTICS",
   "INTELIGÊNCIA ARTIFICIAL",
   "ZUSTAND",
   "POSTGRESQL",
   "CI/CD",
   "CURSOR",
+  "Claude Code",
 ];
 
 export function About() {
@@ -81,19 +107,46 @@ export function About() {
         <div className="gap-between-blocks-xxlarge lg:max-w-cols-6 flex flex-col">
           <div>
             <h2 className="mb-between-title-text h3">
-              Experiência e tecnologias
+              💻 Experiências e tecnologias
             </h2>
             <div>
-              Each IOH module is built for implementation — not just
-              information. With structured frameworks, clinical depth, and
-              real-world relevance, you’ll gain the confidence to treat the root
-              cause, not just chase symptoms.
+              Atuo no desenvolvimento, criação e gestão de sistemas, interfaces
+              e automações, desde o design até o deployment, construindo
+              aplicações escaláveis, performáticas e bem estruturadas.
               <br />
               <br />
-              Every practitioner’s journey is different — but the results speak
-              for themselves. From confidence in complex cases to clarity in
-              clinical direction, see how IOH has shaped thousands of careers.
+              Tenho experiência em analisar, projetar e conduzir soluções desde
+              a concepção até o lançamento e evolução, sempre com foco em boas
+              práticas de usabilidade, experiência do usuário e com um workflow
+              enxuto e integrado as ferramentas atuais de inteligência
+              artificial (IA).
+              <br />
+              <br />
+              Curso Ciência da Computação e estou em constante evolução,
+              buscando aplicar boas práticas de desenvolvimento, organização de
+              código e padrões de projeto para construir softwares confiáveis e
+              com qualidade.
+              <br />
+              <br />
+              Tenho perfil orientado à resolução de problemas, aprendizado
+              contínuo e colaboração com equipes que valorizam inovação,
+              eficiência e excelência técnica.
             </div>
+          </div>
+
+          <div>
+            <div className="mb-between-blocks-xsmall text-base">
+              Formações e certificações:
+            </div>
+
+            {CERTIFICATIONS.map((item, index) => (
+              <ExperienceItem
+                key={index}
+                className="pb-between-blocks-tiny"
+                period={item.period}
+                title={item.title}
+              />
+            ))}
           </div>
 
           <div>
@@ -118,6 +171,7 @@ export function About() {
               <ExperienceItem
                 key={index}
                 description={item.description}
+                period={item.period}
                 title={item.title}
               />
             ))}
@@ -125,13 +179,13 @@ export function About() {
 
           <div className="gap-between-buttons flex">
             <Button asChild>
-              <Link href="" target="_blank">
+              <Link href={URLS_ACTIONS.WHATSAPP} target="_blank">
                 Entre em contato
               </Link>
             </Button>
             <Button asChild variant="outline">
-              <Link href="" target="_blank">
-                Baixar - CV
+              <Link href={URLS_ACTIONS.LINKEDIN} target="_blank">
+                Linkedin
               </Link>
             </Button>
           </div>

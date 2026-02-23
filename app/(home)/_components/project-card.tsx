@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { VideoBackground } from "@/app/_components/background-video";
 import { Icon } from "@/app/_components/icon";
+import { cn } from "@/lib/utils";
 
 import { Tag } from "./tag";
 
@@ -28,7 +29,14 @@ export function ProjectCard({
   tags,
 }: Readonly<ProjectCardProps>) {
   return (
-    <Link className="rounded-default relative overflow-clip" href={href || "#"}>
+    <Link
+      className={cn(
+        "rounded-default relative cursor-default overflow-clip",
+        href && "cursor-pointer",
+      )}
+      href={href || ""}
+      target={href ? "_blank" : "_self"}
+    >
       <Image
         className="absolute inset-0 z-0 size-full w-full"
         alt={projectName}

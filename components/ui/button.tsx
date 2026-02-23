@@ -64,7 +64,7 @@ export function Button({
       data-variant={variant}
       {...props}
     >
-      <span className="relative z-10">{children}</span>
+      {children}
     </Comp>
   );
 }

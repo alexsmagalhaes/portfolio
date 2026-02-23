@@ -41,9 +41,9 @@ const jetBrains = JetBrains_Mono({
 export function generateMetadata() {
   return generateBaseMetadata({
     url: "/",
-    title: "Alex Magalhães - Dev",
+    title: "Alex Magalhães - Dev. fullstack e Webflow 👋",
     description:
-      "Pare de reinventar a roda. Enquanto outros desenvolvedores ainda configuram login, você já estará coletando feedback.",
+      "Foco na resolução de problemas de forma eficiente, para empresas alcancem novos resultados por meio de processos e soluções eficientes.",
   });
 }
 

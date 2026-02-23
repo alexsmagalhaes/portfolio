@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image1 from "@/app/_assets/images/common/about-image.jpg";
 
 import { getCurrentTime } from "../_utils/get-current-time";
+import { URLS_ACTIONS } from "../constants/urls-action";
 import { Container } from "./container";
 import { GoToTop } from "./go-to-top";
 
@@ -30,31 +31,23 @@ export function Footer() {
             src={Image1}
             width={112}
           />
-          AlexMagalhães.
+          AlexMagalhaes.dev 🤙
         </div>
 
         <Link
           className="underline"
-          href="https://www.linkedin.com/in/alexmagalhaes-dev/"
+          href={URLS_ACTIONS.LINKEDIN}
           target="_blank"
         >
-          Linkedin{" "}
-          <span className="hidden sm:inline">: /alexmagalhaes-dev</span>
+          Linkedin<span className="hidden sm:inline">: /alexmagalhaes-dev</span>
         </Link>
 
-        <Link
-          className="underline"
-          href="https://github.com/alexsmagalhaes/"
-          target="_blank"
-        >
-          Github <span className="hidden sm:inline">: /alexsmagalhaes</span>
+        <Link className="underline" href={URLS_ACTIONS.GITHUB} target="_blank">
+          Github<span className="hidden sm:inline">: /alexsmagalhaes</span>
         </Link>
 
-        <Link
-          className="underline"
-          href="mailto:alexmagalhaesprofissional@gmail.com"
-        >
-          Whatsapp{" "}
+        <Link className="underline" href={URLS_ACTIONS.WHATSAPP}>
+          Whatsapp
           <span className="hidden text-[0.8125rem] sm:inline">
             : (88) 9 9332 - 6040
           </span>

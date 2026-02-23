@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image1 from "@/app/_assets/images/common/github-icon.svg";
 import { Button } from "@/components/ui/button";
 
+import { URLS_ACTIONS } from "../constants/urls-action";
 import { Container } from "./container";
 import { NavbarLink } from "./navbar-link";
 
@@ -55,19 +56,22 @@ export function Navbar() {
         </div>
 
         <div className="gap-between-buttons flex justify-end">
-          <Button className="size-8" square variant="outline">
-            <Image
-              className="size-4 lg:size-3.5"
-              priority
-              alt="Github"
-              height={16}
-              src={Image1}
-              width={16}
-            />
+          <Button className="size-8" asChild square variant="outline">
+            <Link href={URLS_ACTIONS.GITHUB} target="_blank">
+              <Image
+                className="size-4 lg:size-3.5"
+                priority
+                alt="Github"
+                height={16}
+                src={Image1}
+                width={16}
+              />
+            </Link>
           </Button>
-          <Button className="h-8 px-4 text-xs">
-            <span className="sm:hidden">Resume</span>{" "}
-            <span className="hidden sm:inline-block">Baixar - CV</span>
+          <Button className="h-8 px-4 text-xs" asChild>
+            <Link href={URLS_ACTIONS.LINKEDIN} target="_blank">
+              Linkedin
+            </Link>
           </Button>
         </div>
       </Container>
