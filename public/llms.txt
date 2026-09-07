@@ -1,0 +1,15 @@
+# Alex Magalhães
+
+> Dev. fullstack e Webflow. Foco na resolução de problemas de forma eficiente, para empresas alcancem novos resultados por meio de processos e soluções eficientes.
+
+Portfólio de Alex Magalhães, desenvolvedor fullstack (Next.js, TypeScript, Node.js) e Webflow, com experiência em design systems, automações, SEO/metrificação e integrações com serviços de terceiros. Disponível em português (padrão) e inglês.
+
+## Páginas
+
+- [Portfólio (pt-BR)](https://alex-magalhaes.vercel.app/): projetos desenvolvidos, experiências, tecnologias e contato.
+- [Portfolio (en)](https://alex-magalhaes.vercel.app/en): same content in English.
+
+## Contato
+
+- LinkedIn: https://www.linkedin.com/in/alexmagalhaes-dev
+- GitHub: https://github.com/alexsmagalhaes
