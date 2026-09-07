@@ -1,3 +1,4 @@
+import { useIntlayer } from "next-intlayer/server";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,13 +11,14 @@ import { GoToTop } from "./go-to-top";
 
 export function Footer() {
   const time = getCurrentTime();
+  const content = useIntlayer("footer");
 
   return (
     <footer id="contacts" className="border-border-default border-t py-4.5">
       <Container className="gap-between-blocks-large grid w-full grid-cols-2 items-center md:grid-cols-3 lg:flex lg:items-center lg:justify-between">
         <Image
           className="col-span-2 w-full sm:hidden"
-          alt="Alex desenvolvendo um projeto para um cliente"
+          alt={content.imageAlt.value}
           height={564}
           loading="eager"
           src={Image1}
@@ -25,13 +27,13 @@ export function Footer() {
         <div className="gap-between-blocks-xxsmall flex items-center">
           <Image
             className="hidden w-14 sm:block"
-            alt="Alex desenvolvendo um projeto para um cliente"
+            alt={content.imageAlt.value}
             height={56}
             loading="eager"
             src={Image1}
             width={112}
           />
-          AlexMagalhaes.dev 🤙
+          {content.brand}
         </div>
 
         <Link
@@ -39,17 +41,17 @@ export function Footer() {
           href={URLS_ACTIONS.LINKEDIN}
           target="_blank"
         >
-          Linkedin<span className="hidden sm:inline">: /alexmagalhaes-dev</span>
+          {content.linkedin}<span className="hidden sm:inline">{content.linkedinHandle}</span>
         </Link>
 
         <Link className="underline" href={URLS_ACTIONS.GITHUB} target="_blank">
-          Github<span className="hidden sm:inline">: /alexsmagalhaes</span>
+          {content.github}<span className="hidden sm:inline">{content.githubHandle}</span>
         </Link>
 
         <Link className="underline" href={URLS_ACTIONS.WHATSAPP}>
-          Whatsapp
+          {content.whatsapp}
           <span className="hidden text-[0.8125rem] sm:inline">
-            : (88) 9 9332 - 6040
+            {content.whatsappHandle}
           </span>
         </Link>
 

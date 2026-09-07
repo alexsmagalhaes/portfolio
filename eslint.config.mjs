@@ -137,7 +137,13 @@ const eslintConfig = defineConfig([
       "require-await": "error",
     },
   },
-  globalIgnores([".next/", "out/", "build/**", "next-env.d.ts"]),
+  globalIgnores([
+    ".next/",
+    "out/",
+    "build/**",
+    "next-env.d.ts",
+    ".intlayer/",
+  ]),
 ]);
 
 export default eslintConfig;

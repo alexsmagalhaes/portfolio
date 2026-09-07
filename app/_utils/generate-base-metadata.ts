@@ -1,37 +1,58 @@
+import type { __DictionaryRegistry } from "intlayer";
 import type { Metadata } from "next";
+import type { LocalPromiseParams } from "next-intlayer";
 
-interface GenerateBaseMetadataProps {
-  url: string;
+import { getIntlayer, getMultilingualUrls } from "intlayer";
+
+type PageMetadataDictionary = {
   title: string;
   description: string;
+};
+
+interface GenerateBaseMetadataProps {
+  params: LocalPromiseParams["params"];
+  dictionaryKey: keyof __DictionaryRegistry;
+  path: string;
 }
 
-export function generateBaseMetadata({
-  url,
-  title,
-  description,
-}: GenerateBaseMetadataProps): Metadata {
+export async function generateBaseMetadata({
+  params,
+  dictionaryKey,
+  path,
+}: GenerateBaseMetadataProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  const metadata = getIntlayer(dictionaryKey, locale) as PageMetadataDictionary;
+
   const baseUrl = new URL(process.env.FRONTEND_URL!);
-  const fullUrl = new URL(url, baseUrl);
+  const fullUrl = new URL(path, baseUrl);
+
+  const multilingualUrls = getMultilingualUrls(path);
+  const localizedUrl =
+    multilingualUrls[locale as keyof typeof multilingualUrls];
 
   return {
     metadataBase: baseUrl,
 
     applicationName: process.env.APPLICATION_NAME!,
 
-    title,
-    description,
+    title: metadata.title,
+    description: metadata.description,
 
     alternates: {
-      canonical: fullUrl.pathname,
+      canonical: localizedUrl,
+      languages: {
+        ...multilingualUrls,
+        "x-default": fullUrl.pathname,
+      },
     },
 
     openGraph: {
       type: "website",
-      url: fullUrl,
+      url: localizedUrl,
       siteName: process.env.APPLICATION_NAME!,
-      title,
-      description,
+      title: metadata.title,
+      description: metadata.description,
       images: [
         {
           url: "/ogi.png",
@@ -44,8 +65,8 @@ export function generateBaseMetadata({
 
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: metadata.title,
+      description: metadata.description,
       images: ["/ogi.png"],
     },
 

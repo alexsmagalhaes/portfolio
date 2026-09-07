@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import { withIntlayer } from "next-intlayer/server";
+
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -11,10 +13,12 @@ const nextConfig: NextConfig = {
   },
 };
 
+const nextConfigWithIntl = withIntlayer(nextConfig);
+
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
   openAnalyzer: true,
 });
 
-export default withBundleAnalyzer(nextConfig);
+export default withBundleAnalyzer(nextConfigWithIntl);

@@ -1,3 +1,4 @@
+import { useIntlayer } from "next-intlayer/server";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,31 +8,34 @@ import { Button } from "@/components/ui/button";
 import { URLS_ACTIONS } from "../constants/urls-action";
 import { Container } from "./container";
 import { NavbarLink } from "./navbar-link";
-
-const ITEMS = [
-  {
-    text: "Início/topo",
-    sectionId: "",
-    icon: "",
-  },
-  {
-    text: "Projetos",
-    sectionId: "projects",
-    icon: "folder_code",
-  },
-  {
-    text: "Sobre",
-    sectionId: "about",
-    icon: "table_chart_view",
-  },
-  {
-    text: "Contatos",
-    sectionId: "contacts",
-    icon: "call",
-  },
-];
+import { NavbarLocaleSwitcher } from "./navbar-locale-switcher";
 
 export function Navbar() {
+  const content = useIntlayer("navbar");
+
+  const ITEMS = [
+    {
+      text: content.items.home.value,
+      sectionId: "",
+      icon: "",
+    },
+    {
+      text: content.items.projects.value,
+      sectionId: "projects",
+      icon: "folder_code",
+    },
+    {
+      text: content.items.about.value,
+      sectionId: "about",
+      icon: "table_chart_view",
+    },
+    {
+      text: content.items.contacts.value,
+      sectionId: "contacts",
+      icon: "call",
+    },
+  ];
+
   return (
     <nav className="bg-bg-theme-1 border-border-default sticky top-0 z-40 flex max-h-16 items-center border-b py-4">
       <Container className="gap-between-blocks-large flex grid-cols-3 items-center justify-between lg:grid">
@@ -55,7 +59,9 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="gap-between-buttons flex justify-end">
+        <div className="gap-between-buttons flex items-center justify-end">
+          <NavbarLocaleSwitcher />
+
           <Button className="size-8" asChild square variant="outline">
             <Link href={URLS_ACTIONS.GITHUB} target="_blank">
               <Image
