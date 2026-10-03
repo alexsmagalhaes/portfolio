@@ -21,15 +21,17 @@ export function Footer() {
           alt={content.imageAlt.value}
           height={564}
           loading="eager"
+          placeholder="blur"
           src={Image1}
           width={296}
         />
         <div className="gap-between-blocks-xxsmall flex items-center">
           <Image
-            className="hidden w-14 sm:block"
+            className="hidden w-14 sm:block md:hidden"
             alt={content.imageAlt.value}
             height={56}
             loading="eager"
+            placeholder="blur"
             src={Image1}
             width={112}
           />
