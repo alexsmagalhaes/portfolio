@@ -136,7 +136,7 @@
 
   body {
     font-family: var(--font-body);
-    @apply text-body-100 bg-bg-theme-1 text-sm leading-normal font-[450];
+    @apply text-body-100 bg-bg-theme-1 text-sm leading-relaxed font-[400];
   }
 
   h1,
@@ -152,7 +152,7 @@
   .h5,
   .h6 {
     font-family: var(--font-heading);
-    @apply text-title-100 leading-[1.3] font-[450] tracking-[0.02em];
+    @apply text-title-100 leading-[1.3] font-[400] tracking-[0.02em];
   }
 
   h1,
@@ -270,8 +270,8 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 1440px) {
   :root {
-    --font-from: 13;
-    --font-to: 14;
+    --font-from: 12;
+    --font-to: 13.5;
     --vw-from: calc(479 / 100);
     --vw-to: calc(1440 / 100);
   }
