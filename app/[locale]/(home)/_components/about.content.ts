@@ -30,6 +30,17 @@ const aboutContent = {
       }),
     ],
 
+    photo1Alt: t({
+      "pt-BR":
+        "Alex trabalhando no notebook em sua mesa, com um quadro da dewe ao fundo",
+      en: "Alex working on a laptop at their desk, with a dewe frame in the background",
+    }),
+    photo2Alt: t({
+      "pt-BR":
+        "Retrato de Alex sorrindo, sentado em frente ao monitor no escritório",
+      en: "Portrait of Alex smiling, seated in front of a monitor in the office",
+    }),
+
     certificationsLabel: t({
       "pt-BR": "Formações e certificações:",
       en: "Education and certifications:",

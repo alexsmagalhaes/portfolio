@@ -2,6 +2,8 @@ import { useIntlayer } from "next-intlayer/server";
 import Image from "next/image";
 import Link from "next/link";
 
+import Photo1 from "@/app/_assets/images/home/about-1.jpg";
+import Photo2 from "@/app/_assets/images/home/about-2.jpg";
 import Image1 from "@/app/_assets/images/home/about-bg.svg";
 import { Container } from "@/app/_components/container";
 import { URLS_ACTIONS } from "@/app/constants/urls-action";
@@ -73,6 +75,25 @@ export function About() {
                 </span>
               ))}
             </div>
+          </div>
+
+          <div className="gap-between-blocks-xsmall grid md:grid-cols-2">
+            <Image
+              className="rounded-sm"
+              alt={content.photo1Alt.value}
+              height={416}
+              placeholder="blur"
+              src={Photo1}
+              width={646}
+            />
+            <Image
+              className="rounded-sm"
+              alt={content.photo2Alt.value}
+              height={416}
+              placeholder="blur"
+              src={Photo2}
+              width={646}
+            />
           </div>
 
           <div>
