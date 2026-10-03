@@ -11,7 +11,7 @@ const buttonVariants = cva(
   tracking-[0.05em] text-white uppercase
   outline-none gap-inner-gap cursor-pointer
 
-  relative overflow-hidden
+  relative overflow-hidden shrink-0
 
   before:absolute before:inset-y-0 before:left-0
   before:w-0 before:bg-white/5
@@ -42,12 +42,14 @@ export function Button({
   size = "md",
   square = false,
   asChild = false,
+  disableAnimation = false,
   children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
     square?: boolean;
+    disableAnimation?: boolean;
   }) {
   const Comp = asChild ? Slot : "button";
 
@@ -56,6 +58,7 @@ export function Button({
       className={cn(
         buttonVariants({ variant, size }),
         square && "aspect-square px-0 whitespace-normal",
+        disableAnimation && "before:hidden",
         className,
       )}
       data-size={size}

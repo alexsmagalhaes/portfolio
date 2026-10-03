@@ -4,19 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { VideoBackground } from "@/app/_components/background-video";
-import { Icon } from "@/app/_components/icon";
 import { cn } from "@/lib/utils";
 
-import { Tag } from "./tag";
-
-interface ProjectCardProps {
+export interface ProjectCardProps {
   projectName: string;
   video: string;
   href?: string;
   videoCover: StaticImageData;
   cover: StaticImageData;
-  tags: string[];
-  shortDescription: string;
 }
 
 export function ProjectCard({
@@ -25,52 +20,45 @@ export function ProjectCard({
   video,
   videoCover,
   projectName,
-  shortDescription,
-  tags,
 }: Readonly<ProjectCardProps>) {
-  return (
-    <Link
-      className={cn(
-        "rounded-default relative cursor-default overflow-clip",
-        href && "cursor-pointer",
-      )}
-      href={href || ""}
-      target={href ? "_blank" : "_self"}
-    >
+  const className = cn(
+    "rounded-default relative block cursor-default overflow-clip",
+    href && "cursor-pointer",
+  );
+
+  const children = (
+    <>
       <Image
-        className="absolute inset-0 z-0 size-full w-full"
+        className="h-full w-full object-cover"
         alt={projectName}
-        height={374}
-        loading="eager"
+        height={404}
         placeholder="blur"
         src={cover}
-        width={442}
+        width={670}
       />
 
-      <div className="py-between-blocks-medium px-between-blocks-medium bg-bg-theme-1/70 gap-between-blocks-xsmall relative z-10 flex flex-col transition-all duration-500 lg:opacity-0 lg:hover:opacity-100">
-        <div
-          className="text-title-100 flex items-center justify-between text-base"
-          title={projectName}
-        >
-          {projectName} {href && <Icon name="arrow_outward" size={24} />}
-        </div>
-
-        <div className="rounded-default relative aspect-[1.8] grow overflow-clip shadow-xl">
+      <div className="bg-bg-theme-1/60 absolute inset-0 flex items-center justify-center py-12 transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100">
+        <div className="relative aspect-[494/278] w-4/5 overflow-clip rounded-xs shadow-[0_7px_80px_rgba(0,0,0,0.35)]">
           <VideoBackground fallbackImage={videoCover}>
             <source src={video} type="video/mp4" />
           </VideoBackground>
         </div>
-
-        <div title={shortDescription}>{shortDescription}</div>
-
-        <div className="gap-inner-gap flex flex-wrap">
-          {tags.map((item, index) => (
-            <Tag key={index} variant="gray">
-              {item}
-            </Tag>
-          ))}
-        </div>
       </div>
+    </>
+  );
+
+  if (!href) {
+    return <div className={cn(className, "group")}>{children}</div>;
+  }
+
+  return (
+    <Link
+      className={cn(className, "group")}
+      href={href}
+      target="_blank"
+      title={projectName}
+    >
+      {children}
     </Link>
   );
 }

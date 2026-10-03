@@ -13,6 +13,15 @@ const projectsContent = {
       en: "Applications I built for companies that needed to improve processes, cut costs and grow their digital reach.",
     }),
 
+    showMore: t({
+      "pt-BR": "Mostrar mais",
+      en: "Show more",
+    }),
+    showLess: t({
+      "pt-BR": "Mostrar menos",
+      en: "Show less",
+    }),
+
     items: [
       {
         projectName: t({
