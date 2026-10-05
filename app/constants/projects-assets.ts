@@ -66,5 +66,6 @@ export const PROJECTS_ASSETS: ProjectAsset[] = [
     video:
       "https://wexoor92cdqpulec.public.blob.vercel-storage.com/serrao-de-castro.mp4",
     videoCover: Cover1,
+    href: "https://serraodecastro.com/",
   },
 ];
