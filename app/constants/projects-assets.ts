@@ -11,6 +11,7 @@ import Image3 from "@/app/_assets/images/home/project-3.jpg";
 import Image4 from "@/app/_assets/images/home/project-4.jpg";
 import Image5 from "@/app/_assets/images/home/project-5.jpg";
 import Image6 from "@/app/_assets/images/home/project-6.jpg";
+import Image7 from "@/app/_assets/images/home/project-7.jpg";
 import Cover1 from "@/app/_assets/images/home/serrao-de-castro-cover.png";
 
 interface ProjectAsset {
@@ -46,6 +47,13 @@ export const PROJECTS_ASSETS: ProjectAsset[] = [
     cover: Image3,
     video: "https://wexoor92cdqpulec.public.blob.vercel-storage.com/cotaindie",
     videoCover: Cover3,
+  },
+  {
+    cover: Image7,
+    video:
+      "https://wexoor92cdqpulec.public.blob.vercel-storage.com/truiv.mp4",
+    videoCover: Image7,
+    href: "https://truiv.com.br/",
   },
   {
     cover: Image2,
