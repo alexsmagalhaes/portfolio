@@ -90,6 +90,22 @@ const projectsContent = {
       },
       {
         projectName: t({
+          "pt-BR": "Truiv",
+          en: "Truiv",
+        }),
+        shortDescription: t({
+          "pt-BR":
+            "Site institucional focado em apresentação da marca e geração de contatos.",
+          en: "Corporate website focused on brand presentation and lead generation.",
+        }),
+        tags: [
+          t({ "pt-BR": "Next Js", en: "Next Js" }),
+          t({ "pt-BR": "Metrificação", en: "Metrics" }),
+          t({ "pt-BR": "SEO", en: "SEO" }),
+        ],
+      },
+      {
+        projectName: t({
           "pt-BR": "IBF - Industria de Telhas",
           en: "IBF - Roof Tile Manufacturer",
         }),
